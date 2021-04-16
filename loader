@@ -1,0 +1,43 @@
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
+Frame.BorderColor3 = Color3.fromRGB(51, 174, 255)
+Frame.BorderSizePixel = 2
+Frame.Position = UDim2.new(0.30523628, 0, 0.364541829, 0)
+Frame.Size = UDim2.new(0, 318, 0, 142)
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.36477989, 0, 0.190140843, 0)
+TextLabel.Size = UDim2.new(0, 86, 0, 39)
+TextLabel.Font = Enum.Font.PermanentMarker
+TextLabel.Text = "DevX"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 43.000
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(51, 150, 255)
+TextButton.Position = UDim2.new(0.0628930852, 0, 0.647887349, 0)
+TextButton.Size = UDim2.new(0, 278, 0, 40)
+TextButton.Font = Enum.Font.GothamSemibold
+TextButton.TextColor3 = Color3.fromRGB(240, 240, 240)
+TextButton.TextSize = 14.000
+UICorner.CornerRadius = UDim.new(0, 4)
+UICorner.Parent = TextButton
+
+if game.PlaceId == 24323423 then
+	TextButton.Text = "Game Supported, Continue?"
+	TextButton.MouseButton1Click:Connect(function()
+		print"e"
+	end)	
+else
+	TextButton.Text = "Game Not Supported, Continue?"
+	TextButton.MouseButton1Click:Connect(function()
+		print"working"
+	end)
+end
+
